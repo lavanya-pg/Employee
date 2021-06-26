@@ -13,21 +13,22 @@ public class Employee
 		
 		System.out.println("Welcome to the Employee Wage Computation Program");
 		Random ran=new Random();
-		int ran1 = ran.nextInt(2);
-		if (ran1 == 1)
+		int ran1 = ran.nextInt(3);
+		
+		switch (ran1)
 		{
-			System.out.println("Employee is Present");
-			dailywage=Fullday*Wageperhour;
-			System.out.println("Employee Wage is" +dailywage);
+		case 1:
+		dailywage=Fullday*Wageperhour;
+		System.out.println("Employee is present");
+		System.out.println("Employee wage is" +dailywage);
+		break;
+		case 2:
+		dailywage=parttime*Wageperhour;
+		System.out.println("Employee is patrtime present");
+		System.out.println("Employee wage is" +dailywage);
+		break;
+		default:
+			System.out.println("Employee is absent");
 		}
-		else if (ran1 == 2)
-		{
-			System.out.println("Employee is parttime present");
-			dailywage=parttime*Wageperhour;
-			System.out.println("Employee wage is" +dailywage);
-		}
-		else
-			System.out.println("Employee is Absent");
-	 }
-
+	}
 }
