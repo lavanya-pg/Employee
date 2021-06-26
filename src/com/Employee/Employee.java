@@ -10,8 +10,11 @@ public class Employee
 		int Wageperhour=20;
 		int dailywage;
 		int parttime=4;
+		int num_of_workingdays=20;
 		
 		System.out.println("Welcome to the Employee Wage Computation Program");
+		for (int day = 0; day < num_of_workingdays; day++) 
+		{		
 		Random ran=new Random();
 		int ran1 = ran.nextInt(3);
 		
@@ -29,6 +32,7 @@ public class Employee
 		break;
 		default:
 			System.out.println("Employee is absent");
+		}
 		}
 	}
 }
